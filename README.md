@@ -112,3 +112,10 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 2. GameViewModel: Create the GameViewModel class, extending ViewModel
 3. GameViewModel: Add init and override onCleared; Add log statements to both
 4. GameFragment: Create and initialize a GameViewModel, using ViewModelProviders;
+
+## 移動 GameFragment 的 code 到 GameViewModel
+1. GameFragment: Move over the word, score and wordList variables to the GameViewModel
+2. GameFragment: Move over methods resetList, nextWord, onSkip and onCorrect to GameViewModel
+3. GameFragment: Move over this initialization (resetList(), nextWord)to the GameViewModel
+4. GameViewModel: Update these onclickListeners to refer to call methods in the ViewModel
+5. GameFragment: Update these methods to word and score from the ViewModel
