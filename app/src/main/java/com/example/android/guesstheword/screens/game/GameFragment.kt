@@ -62,12 +62,7 @@ class GameFragment : Fragment() {
             }
         })
 
-        viewModel.currentTime.observe(viewLifecycleOwner, Observer {
-            binding.timerText.text = DateUtils.formatElapsedTime(it)
-        })
-
         return binding.root
-
     }
 
 
@@ -79,11 +74,4 @@ class GameFragment : Fragment() {
         val action = GameFragmentDirections.actionGameToScore(viewModel.score.value ?: 0)
         findNavController(this).navigate(action)
     }
-
-    /** Methods for updating the UI **/
-
-    private fun updateWordText() {
-
-    }
-
 }

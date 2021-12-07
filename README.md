@@ -179,3 +179,10 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 3. Remove the score and word observers
 4. Use the LiveData from ScoreViewModel to set the score_text text attribute
 5. Call binding.setLifecycleOwner and remove the score observer.
+
+
+## LiveData Map Transformation
+1. In GameViewModel create a new LiveData called currentTimeString
+2. Use Transformation.map to take currentTime to a String output from currentTimeString
+3. Set timer_text to the value of currentTimeString
+4. Delete the observer for currentTime from GameFragment
