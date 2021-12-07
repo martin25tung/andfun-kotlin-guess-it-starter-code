@@ -133,3 +133,12 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 1. GameViewModel: Make an internal and external version of the word and score
 2. GameViewModel: Make a backing property for external version that returns the internal
 3. GameViewModel: Use the internal version (the MutableLiveData) of _score and _word in this init block
+
+
+
+## 新增結束遊戲事件
+1. GameViewModel: Make a properly encapsulated LiveData called eventGameFinish that holds a boolean
+2. GameViewModel: Make the function onGameFinishComplete which makes the value of eventGameFinish false
+3. GameViewModel: Set eventGameFinish to true, to signify that the game is over
+4. GameFragment: Add an observer of eventGameFinish
+5. GameViewModel: Make the function onGameFinishComplete which makes the value of eventGame
