@@ -152,3 +152,13 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 5. Update the logic in the nextWord function so that it doesn't end the game
 6. Cancel the timer in onCleared
 7. Update the UI
+
+
+## 加上 ViewModelFactory
+1. Create the ScoreViewModel class and have it take in an integer constructor parameter called finalScore
+2. Copy over ScoreViewModelFactory:
+3. In the overridden create method, construct and return an instance of ScoreViewModel, passing in finalScore
+4. Create and construct a ScoreViewModelFactory
+5. Create ScoreViewModel by using ViewModelProviders.of as usual, except you’ll also pass in your ScoreViewModelFactory
+6. Add a LiveData for the score and the play again event
+7. Convert ScoreFragment to properly observe and use ScoreViewModel to update the UI
