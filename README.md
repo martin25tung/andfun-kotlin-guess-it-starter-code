@@ -162,3 +162,12 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 5. Create ScoreViewModel by using ViewModelProviders.of as usual, except you’ll also pass in your ScoreViewModelFactory
 6. Add a LiveData for the score and the play again event
 7. Convert ScoreFragment to properly observe and use ScoreViewModel to update the UI
+
+
+## Add ViewModel to Data Binding
+1. Add a GameViewModel data binding variable to GameFragment layout, You should rebuild the code so all of the generated data binding code is regenerated
+2. In the GameFragment layout, use the view model variable and data binding to handle clicking
+3. Pass the GameViewModel into the data binding
+4. Add a ScoreViewModel data binding variable to ScoreFragment layout
+5. In the ScoreFragment layout, use the view model variable and data binding to handle clicking
+6. Pass the ScoreViewModel into the data binding and remove OnClickListener setup for playAgainButton
