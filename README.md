@@ -142,3 +142,13 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 3. GameViewModel: Set eventGameFinish to true, to signify that the game is over
 4. GameFragment: Add an observer of eventGameFinish
 5. GameViewModel: Make the function onGameFinishComplete which makes the value of eventGame
+
+
+## 加上倒數計時
+1. GameViewModel: Copy the provided companion object with the timer constants
+2. GameViewModel: Create a timer field of type CountDownTimer in the GameViewModel
+3. GameViewModel: Create a properly encapsulated LiveData for the current time called currentTime
+4. GameViewModel: Copy over the CountDownTimer code and then update currentTime and eventGameFinish appropriately as the timer ticks and finishes
+5. Update the logic in the nextWord function so that it doesn't end the game
+6. Cancel the timer in onCleared
+7. Update the UI
