@@ -186,3 +186,11 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 2. Use Transformation.map to take currentTime to a String output from currentTimeString
 3. Set timer_text to the value of currentTimeString
 4. Delete the observer for currentTime from GameFragment
+
+
+## Adding the Buzzer
+1. Add the Vibrate permission
+2. You can also optionally lock the screen to landscape
+3. Copy over the different buzz pattern Long array constants
+4. Make an enum called BuzzType in GameViewModel
+5. Copy over the buzz method
