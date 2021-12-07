@@ -107,3 +107,8 @@ git diff BRANCH_NAME
 ## Report Issues
 Notice any issues with a repository? Please file a GitHub issue in the repository.
 
+
+## 新增 GameViewModel 並在 GameFragment 初始化
+2. GameViewModel: Create the GameViewModel class, extending ViewModel
+3. GameViewModel: Add init and override onCleared; Add log statements to both
+4. GameFragment: Create and initialize a GameViewModel, using ViewModelProviders;
