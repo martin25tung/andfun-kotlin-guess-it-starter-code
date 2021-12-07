@@ -125,5 +125,11 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 ## 加入 LiveData
 1. GameViewModel: Wrap word and score in MutableLiveData
 2. GameViewModel: Change references to score and word to score. 
-3. GAmeViewModel: Initialize score.value to 0
+3. GameViewModel: Initialize score.value to 0
 4. GameFragment: Add viewModel.score observed
+
+
+## 封裝 LiveData 
+1. GameViewModel: Make an internal and external version of the word and score
+2. GameViewModel: Make a backing property for external version that returns the internal
+3. GameViewModel: Use the internal version (the MutableLiveData) of _score and _word in this init block
