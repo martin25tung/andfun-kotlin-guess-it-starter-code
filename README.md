@@ -171,3 +171,11 @@ Notice any issues with a repository? Please file a GitHub issue in the repositor
 4. Add a ScoreViewModel data binding variable to ScoreFragment layout
 5. In the ScoreFragment layout, use the view model variable and data binding to handle clicking
 6. Pass the ScoreViewModel into the data binding and remove OnClickListener setup for playAgainButton
+
+
+## Add LiveData Data Binding
+1. For score_text and word_text use the LiveData from GameViewModel to set the text attribute
+2. Call binding.setLifecycleOwner to make the data binding lifecycle aware
+3. Remove the score and word observers
+4. Use the LiveData from ScoreViewModel to set the score_text text attribute
+5. Call binding.setLifecycleOwner and remove the score observer.

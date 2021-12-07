@@ -54,10 +54,11 @@ class ScoreFragment : Fragment() {
         viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(arguments!!).score)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(ScoreViewModel::class.java)
         binding.scoreViewModel = viewModel
+        binding.lifecycleOwner = this
 
-        // Get args using by navArgs property delegate
-        val scoreFragmentArgs by navArgs<ScoreFragmentArgs>()
-        binding.scoreText.text = scoreFragmentArgs.score.toString()
+//        // Get args using by navArgs property delegate
+//        val scoreFragmentArgs by navArgs<ScoreFragmentArgs>()
+//        binding.scoreText.text = scoreFragmentArgs.score.toString()
 
         viewModel.eventPlayAgain.observe(viewLifecycleOwner, Observer {
             if (it) onPlayAgain()
